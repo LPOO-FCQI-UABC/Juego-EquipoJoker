@@ -9,7 +9,6 @@ public class App {
         JFrame window = new JFrame("Take care of the plant!");
         // when we close the window, stop the app
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
         // create the jpanel to draw on.
         // this also initializes the game loop
         Board board = new Board();

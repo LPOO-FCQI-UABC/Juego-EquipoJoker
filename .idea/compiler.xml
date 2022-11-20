@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Juego-EquipoJoker" />
+        <module name="TakeCarePlant-GAME" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Juego-EquipoJoker" target="17" />
+      <module name="TakeCarePlant-GAME" target="17" />
     </bytecodeTargetLevel>
   </component>
 </project>
