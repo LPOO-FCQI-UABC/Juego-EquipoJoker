@@ -1,44 +1,46 @@
-import java.awt.Graphics;
+import javax.imageio.ImageIO;
+import java.awt.*;
+import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
 import java.awt.image.ImageObserver;
-import java.awt.Point;
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import javax.imageio.ImageIO;
 
-public class Plant {
-
+public abstract class Element {
     // image that represents the coin's position on the board
-    private BufferedImage showImage;
-    private String image;
+    private BufferedImage image;
 
-    // current position of the plant on the board grid
-    private Point pos;
+    // current position of the coin on the board grid
+    public Point pos;
     private int x;
     private int y;
-    public Plant(int x, int y,String imagePlant) {
+
+
+    public Element(int x, int y,String imageElement) {
         // load the assets
-        loadImage(imagePlant);
+        loadImage(imageElement);
         this.x=x;
         this.y=y;
+
+        // initialize the state
+        pos = new Point(x, y);
+    }
+    public Element(int x, int y) {
+        // load the assets
+
+        this.x=x;
+        this.y=y;
+
         // initialize the state
         pos = new Point(x, y);
     }
 
-    public String getImage() {
-        return image;
-    }
 
-    public void setImage(String image) {
-        this.image = image;
-        loadImage(image);
-    }
-    private void loadImage(String image) {
+    private void loadImage(String imageElement) {
         try {
             // you can use just the filename if the image file is in your
             // project folder, otherwise you need to provide the file path.
-            showImage = ImageIO.read(new File("images/"+image));
+            image = ImageIO.read(new File("images/"+imageElement));
         } catch (IOException exc) {
             System.out.println("Error opening image file: " + exc.getMessage());
         }
@@ -50,7 +52,7 @@ public class Plant {
         // this is also where we translate board grid position into a canvas pixel
         // position by multiplying by the tile size.
         g.drawImage(
-                showImage,
+                image,
                 pos.x * Board.tileSize,
                 pos.y * Board.tileSize,
                 observer

@@ -1,17 +1,52 @@
-package org.example;
-
 import javax.swing.*;
+import java.util.ArrayList;
 
-public class App {
+class App {
 
     private static void initWindow() {
         // create a window frame and set the title in the toolbar
         JFrame window = new JFrame("Take care of the plant!");
         // when we close the window, stop the app
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        int tileSize=65;
+        int rows=12;
+        int cols=18;
+        int numTools=20;
+        int numObstacles=5;
+        ArrayList<Player> playerList = new ArrayList<>();
+        playerList.add(new Player1(0,0,"player1.png"));
+        playerList.add(new Player2(cols-1,rows-1,"player2.png"));
+        Plant plant = new Plant(cols/2-1,rows/2-1,"plant1.png");
+        ArrayList<String> plantPhases = new ArrayList<>();
+        plantPhases.add("plant1.png");
+        plantPhases.add("plant2.png");
+        plantPhases.add("plant3.png");
+        plantPhases.add("plant4.png");
+        plantPhases.add("plant5.png");
+
+        int pointsToWin=200;
+        int pointsAdded=10;
+        int pointsSubtracted=-15;
+
+
+        String welcomeText="Welcome to the game 'Take care of the plant'! \nDESCRIPTION \nYou are both gardeners who need to take care of a plant";
+        welcomeText+="\nYou must work together by watering the plant and giving it fertilizer to keep it alive";
+        welcomeText+="\nAlso, don't forget a plant needs sunlight to grow, so make sure you give it some";
+        welcomeText+="\n\nBut beware, You also must avoid the weeds at all costs or else the plant will die";
+        welcomeText+="\n\nNOTE: One of you can move around the board using the arrow keys and the other can use WASD";
+
+        ArrayList<String> toolName=new ArrayList<>();
+
+        toolName.add("water.png");
+        toolName.add("fertilizer.png");
+        toolName.add("sun.png");
+        ArrayList<String> obstacleName=new ArrayList<>();
+        obstacleName.add("weeds.png");
+
         // create the jpanel to draw on.
         // this also initializes the game loop
-        Board board = new Board();
+        Board board = new Board(tileSize,rows,cols,numTools,numObstacles,playerList,plant,plantPhases,welcomeText,toolName,
+                obstacleName,pointsToWin,pointsAdded,pointsSubtracted);
         // add the jpanel to the window
         window.add(board);
         // pass keyboard inputs to the jpanel
