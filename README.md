@@ -16,7 +16,18 @@ Además de proporcionar luz solar a la planta para crecer
 Pero deben evitar coger obstaculos como las hierbas malas o de lo contrario la planta morirá.
 
 
-//////INSTRUCCIONES
+//INSTRUCCIONES PARA INSTALAR Y CORRER EL JUEGO
+
+1-Clonar el reposiorio 
+
+2-Ir al archivo App.
+
+3-Correr el juego.
+
+
+
+//////INSTRUCCIONES PARA JUGAR//////
+
 El jugador 1 de la esquina superior izquierda jugara utilizando las teclas WASD o su control mientras que 
 
 el jugador 2( de la esquina inferior derecha) jugara utilizando la eclas d eflecha o su control
