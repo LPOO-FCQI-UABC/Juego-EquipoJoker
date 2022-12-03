@@ -1,14 +1,20 @@
+package org.example;
+
+import gameLibrary.Board;
+import gameLibrary.Plant;
+import gameLibrary.Player;
+
 import javax.swing.*;
+import java.awt.*;
 import java.util.ArrayList;
 
 class App {
-
     private static void initWindow() {
         // create a window frame and set the title in the toolbar
         JFrame window = new JFrame("Take care of the plant!");
         // when we close the window, stop the app
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        int tileSize=65;
+        int tileSize=60;
         int rows=12;
         int cols=18;
         int numTools=20;
@@ -28,7 +34,6 @@ class App {
         int pointsAdded=10;
         int pointsSubtracted=-15;
 
-
         String welcomeText="Welcome to the game 'Take care of the plant'! \nDESCRIPTION \nYou are both gardeners who need to take care of a plant";
         welcomeText+="\nYou must work together by watering the plant and giving it fertilizer to keep it alive";
         welcomeText+="\nAlso, don't forget a plant needs sunlight to grow, so make sure you give it some";
@@ -43,15 +48,16 @@ class App {
         ArrayList<String> obstacleName=new ArrayList<>();
         obstacleName.add("weeds.png");
 
-        // create the jpanel to draw on.
-        // this also initializes the game loop
+        // create and start the board of the game
         Board board = new Board(tileSize,rows,cols,numTools,numObstacles,playerList,plant,plantPhases,welcomeText,toolName,
                 obstacleName,pointsToWin,pointsAdded,pointsSubtracted);
+        board.setBackground(new Color(139,69,19));
+
         // add the jpanel to the window
         window.add(board);
         // pass keyboard inputs to the jpanel
         window.addKeyListener(board);
-        
+
         // don't allow the user to resize the window
         window.setResizable(false);
         // fit the window size around the components (just our jpanel).

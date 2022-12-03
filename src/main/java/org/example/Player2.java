@@ -1,7 +1,11 @@
+package org.example;
+
+import gameLibrary.Player;
+
 import java.awt.*;
 import java.awt.event.KeyEvent;
 
-public class Player2 extends Player{
+public class Player2 extends Player {
     private Point pos=super.getPos();
     public Player2(int x, int y,String image) {
         super(x, y,image);

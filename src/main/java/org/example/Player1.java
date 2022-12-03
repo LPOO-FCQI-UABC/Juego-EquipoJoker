@@ -1,10 +1,14 @@
+package org.example;
+
+import gameLibrary.Player;
+
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.IOException;
 
-public class Player1 extends Player{
+public class Player1 extends Player {
     private Point pos=super.getPos();
     public Player1(int x, int y,String image) {
         super(x, y,image);
