@@ -71,16 +71,24 @@ Nos dirijiremos a las teclas que queremos cambiar en nuestro caso:
 
 Player 1:
 
-A - Izquierda/
-W - Arriba/
-S - Abajo/
+A - Izquierda
+
+W - Arriba
+
+S - Abajo
+
 D - Derecha
 
 Player 2:
+
 (Flechas de la computadora)
+
 Left  - Izquierda/
+
 Up    - Arriba/
+
 Down  - Abajo/
+
 Rigth - Derecha
 
 Una vez Asignadas las teclas del control podremos jugar sin ningun problema.
