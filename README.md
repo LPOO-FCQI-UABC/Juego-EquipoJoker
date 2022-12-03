@@ -67,7 +67,7 @@ Una vez descargado abriremos la aplicacion con el control conectado a la computa
 
 Nos saldran los botones que estan asignados al controlador que por el momento apareceran con la palabra "none"
 
-Nos dirijiremos a las teclas que queremos cambiar en nuestro caso:
+Nos dirijiremos a las teclas que queremos cambiar y le damos doble clic y ponemos la tecla que le queremos poner en nuestro caso:
 
 Player 1:
 
@@ -93,4 +93,6 @@ Rigth - Derecha
 
 Una vez Asignadas las teclas del control podremos jugar sin ningun problema.
 
+Por si no quedo muy claro aqui esta un link en el que se puede observar como cambiar las teclas y como descargarlo
 
+Link: https://www.youtube.com/watch?v=ZpB8VD2sE58
