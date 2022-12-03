@@ -83,11 +83,11 @@ Player 2:
 
 (Flechas de la computadora)
 
-Left  - Izquierda/
+Left  - Izquierda
 
-Up    - Arriba/
+Up    - Arriba
 
-Down  - Abajo/
+Down  - Abajo
 
 Rigth - Derecha
 
