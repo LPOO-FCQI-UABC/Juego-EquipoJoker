@@ -55,6 +55,34 @@ Si recogen todas la matas, si importar el puntaje, perderan ambos jugadores.
 
 
 
-///INSTRUCCION PARA CONECTAR Y UTLIZAR OCNTROLES
+///INSTRUCCION PARA CONECTAR Y UTLIZAR CONTROLES
+
+Para utilizar los controles se necesitara el programa "JoyToKey" 
+
+Link: https://joytokey.net/en/download
+
+Descarga directa: https://joytokey.net/download/JoyToKeySetup_en.exe
+
+Una vez descargado abriremos la aplicacion con el control conectado a la computadora
+
+Nos saldran los botones que estan asignados al controlador que por el momento apareceran con la palabra "none"
+
+Nos dirijiremos a las teclas que queremos cambiar en nuestro caso:
+
+Player 1:
+
+A - Izquierda
+W - Arriba
+S - Abajo
+D - Derecha
+
+Player 2:
+(Flechas de la computadora)
+Left  - Izquierda
+Up    - Arriba
+Down  - Abajo
+Rigth - Derecha
+
+Una vez Asignadas las teclas del control podremos jugar sin ningun problema.
 
 
