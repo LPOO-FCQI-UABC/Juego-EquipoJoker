@@ -16,238 +16,34 @@ Además de proporcionar luz solar a la planta para crecer
 Pero deben evitar coger obstaculos como las hierbas malas o de lo contrario la planta morirá.
 
 
-/////////////////////
+//////INSTRUCCIONES
+El jugador 1 de la esquina superior izquierda jugara utilizando las teclas WASD o su control mientras que 
 
-CLASE APP
+el jugador 2( de la esquina inferior derecha) jugara utilizando la eclas d eflecha o su control
 
+Cada jugador se movera en el tablero del juego y cuando uno llegue a un cuadro con la imagen de una herramienta 
+o de una mata, el jugador lo recolectara para la planta y desaparcera del tablero de juego.
 
-private static void initWindow() ;
+Si el jugador recolecta una herramienta util(agua, ferliizante o sol), le sumara 10 puntos al puntaje total de ambos jugadores.
 
-Donde se crea un marco de ventanacuyo tamano no se puede modificar
+Si el jugador recolecta una obstaculo(mata), le restara 15 puntos al puntaje total de ambos jugadores.
 
-con el titulo y tablero principal donde se lleva acabo el juego.
 
+Cada que ganen cierta cantidad de puntos, la planta crecera(cambiara la imagen a un planta mas desarollada),
 
-///////////////////
-CLASE BOARD
+y si sus puntos bajan regresara a un estado mas chico la planta.
 
-public Board();
 
+Entre los dos deben de evitar recojer todas las matas, o perderan.
 
-metodo donde se inicializa el tablero al llamar metodos donde se 
+Si recojen todas las herraminetas utiles y evitan las matas, ganaran 200 puntos y acabaran el juego como ganadores.
 
-establece el tamaño, fondo, jugadores, herramientas y planta del tablero de juego,
+Si recojen todas la herraminetas utiles y algunas matas, mientras el puntaje final de ambos sea mayor a 150.
 
-al igual que un temporizador que checa las acciones hechas durante el hugo
-cada cierta tiempo
+Si recogen todas la matas, si importar el puntaje, perderan ambos jugadores.
 
 
 
-
-public void actionPerformed(ActionEvent e)
-  
- metodo que llama una funcion tick, el que quita y pone 
- puntos al jugador, checa el estado del juego y esta constantemente 
- cambiando el diseno grafico del tablero
- 
- 
-
-public void paintComponent(Graphics g);
- 
-  metodo que muestra las herramientas, trabajos, 
-  putuaeje y fondo del tablero
-
-
-
- public void keyPressed(KeyEvent e);
- 
-metodo para que los personajes del jugador reaccionen a los eventos del teclado
-
-
-
-public void drawBackground(Graphics g);
-
-metodo que colorea el trablero de forma que parexca tablero de ajedrez
-
-
-
- public void drawScore(Graphics g);
- 
- metodo donde se imprime el puntuaje total entre los dos jugadores
- en la parte inferior del tablero
- 
- 
-
-
- public ArrayList<Tool> populateTools();
- 
- metodo donde se incializan herramientas y obstaculos en posiciones aleatorias 
- del tablero checando que no se repitan posiciones
- 
- 
- 
- public ArrayList<Player> populatePlayers();
- 
- metodo donde se incializan los jugadores en el tablero
- 
- 
- 
- public void collectTools();
- 
-   metodo que da a los jugadores puntos por recolectar herramientas
-   y le quita puntos por recoger un obstaculo al crear un arreglo con
-   los herramientas recogidas
-   
-   
-   
- public void growingPlant();
- 
- cambia la imagen de la planta para simular su crecieminto dependiendo del 
- puntuaje total entre los jugadores
- 
- 
- 
- 
- private int getTotalScore();
- 
- Consigue la puntuación total de ambos jugadores.
-       
-       
-       
-
- public void checkState();
-    verifica el número de herramientas y rocas/obstáculos en el tablero
-    Y dependiendo si no hay más rocas en el tablero, termina el juego y declara perdedor 
-    Si no hay más herramientas en el tablero pero  la puntuación es inferior a 150, termina el juego y declara perdedor
-    Si no hay más herramientas en el tablero pero la puntuación es superior a 150, finaliza el juego y declara un ganador
-
-
-
-
-////////////////////////
-CLASE PLAYER(Super clase)
-
-
-
-
-public Player(int x, int y, String imagePlayer);
-incializa y adminsitra la posicion, imagen y puntuaje de un jugador
-
-
-
-
-private void loadImage(String imagePlayer);
-lee y carga una imagen 
-
-
-
-
-public void draw(Graphics g, ImageObserver observer);
-dibuja el jugador en el tablero con la imagen y posicion 
-    
-    
-    
-   
-public abstract void keyPressed(KeyEvent e);
-mueve el jugador dependiendo de la tecla presionada
-
- 
- public void tick();
- metodo que se asegura que el jugador no se salga del tablero
-
-
-
-public String getScore() ;
- metodo que retorna el puntuaje del jugador
-  
-  
-
- public void addScore(int amount);
- metodo que suma o resta un cierto numero de puntos
- 
- 
- 
- public Point getPos();
-  metodo que retorna la posicion de la herramienta
-       
-       
-////////////////////////
-CLASE PLAYER 1
-
-en el construcutor se llama la superclase de jugador para cargar la posicion, 
-imagen y puntuaje
-
- public void keyPressed(KeyEvent e);
- mueve el jugador dependiendo de la teclas de flecha presionadas
-
-
-
-////////////////////////
-CLASE PLAYER 2
-
-en el construcutor se llama la superclase de jugador para cargar la posicion, 
-imagen y puntuaje
-
- public void keyPressed(KeyEvent e);
- mueve el jugador dependiendo de la teclas WASD presionadas
- 
- 
- 
- ////////////////////////
-CLASE PLANT
-
-
-
-
-public Plant(int x, int y, String image);
-incializa y adminsitra la posicion, imagen y puntuaje de un jugador
-
-
-
-
-private void loadImage(String imagePlayer);
-lee y carga una imagen 
-
-
-
-
-public void draw(Graphics g, ImageObserver observer);
-dibuja el jugador en el tablero con la imagen y posicion 
-    
-    
-    
- public Point getPos();
-  metodo que retorna la posicion de la planta
-    
-
-
-       
- ////////////////////////
-CLASE TOOL
-
-
-
-
-public Tool(int x, int y, String image);
-incializa y adminsitra la posicion, imagen y puntuaje de un jugador
-
-
-
-
-private void loadImage(String imagePlayer);
-lee y carga una imagen 
-
-
-
-
-public void draw(Graphics g, ImageObserver observer);
-metodo dibuja el jugador en el tablero con la imagen y posicion 
-    
-    
- 
-public Point getPos();
-  metodo que retorna la posicion de la herramienta
-    
-    
+///INSTRUCCION PARA CONECTAR Y UTLIZAR OCNTROLES
 
 
