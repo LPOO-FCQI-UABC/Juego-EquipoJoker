@@ -20,9 +20,13 @@ Pero deben evitar coger obstaculos como las hierbas malas o de lo contrario la p
 
 1-Clonar el reposiorio 
 
-2-Ir al archivo App.
+2-Ir al apartado de File y seleccionar Proyect Structure
 
-3-Correr el juego.
+3-Seleccionar libraries y ahi agregar una biblioteca y seleccionar el archivo Jar llamado "gameLibrary.jar"
+
+4-Ir al archivo App.
+
+5-Correr el juego.
 
 
 
