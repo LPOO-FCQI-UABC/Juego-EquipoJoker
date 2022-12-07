@@ -34,7 +34,7 @@ Pero deben evitar coger obstaculos como las hierbas malas o de lo contrario la p
 
 El jugador 1 de la esquina superior izquierda jugara utilizando las teclas WASD o su control mientras que 
 
-el jugador 2( de la esquina inferior derecha) jugara utilizando la eclas d eflecha o su control
+el jugador 2( de la esquina inferior derecha) jugara utilizando la teclas de flecha o su control
 
 Cada jugador se movera en el tablero del juego y cuando uno llegue a un cuadro con la imagen de una herramienta 
 o de una mata, el jugador lo recolectara para la planta y desaparcera del tablero de juego.
